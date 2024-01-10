@@ -1,0 +1,11 @@
+"languageserver": {
+  "ruff-lsp": {
+    "command": "ruff-lsp",
+    "filetypes": ["python"]
+  },
+  "golang": {
+    "command": "gopls",
+    "rootPatterns": ["go.mod"],
+    "filetypes": ["go"]
+  }
+}
