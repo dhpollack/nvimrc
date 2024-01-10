@@ -1,3 +1,16 @@
+local nvim_lsp = require('lspconfig')
+local configs = require('lspconfig.configs')
+if not configs.ruff_lsp then
+  configs.ruff_lsp = {
+    default_config = {
+      cmd = { 'ruff-lsp' },
+      root_dir = nvim_lsp.util.root_pattern('.git', 'pyproject.toml', 'requirements.txt', 'setup.py'),
+      filetypes = { 'python' }
+    }
+  }
+  nvim_lsp.ruff_lsp = configs.ruff_lsp
+end
+
 -- See: https://github.com/neovim/nvim-lspconfig/tree/54eb2a070a4f389b1be0f98070f81d23e2b1a715#suggested-configuration
 local opts = { noremap=true, silent=true }
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)

@@ -75,7 +75,7 @@ autocmd BufWritePre (InsertLeave?) <buffer> lua vim.lsp.buf.formatting_sync(nil,
 
 " LUA CONFIG SECTION "
 lua <<EOF
-require('go-config')
 require('mason-config')
+require('go-config')
 require('ruff-lsp-config')
 EOF
