@@ -78,4 +78,5 @@ lua <<EOF
 require('mason-config')
 require('go-config')
 require('ruff-lsp-config')
+require('bashls-config')
 EOF
